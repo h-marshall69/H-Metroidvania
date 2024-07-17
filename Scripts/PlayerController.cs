@@ -30,6 +30,15 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Jump", true);
         }
         FlipCharapter();
+        Attack();
+    }
+    public void Attack() {
+       //anim.SetBool("Attack", true);
+        if(Input.GetButton("Fire1")) {
+            anim.SetBool("Attack", true);
+        } else {
+            anim.SetBool("Attack", false);
+        }
     }
 
     public void FixedUpdate() {
@@ -63,4 +72,6 @@ public class PlayerController : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
     }
+
+    
 }
